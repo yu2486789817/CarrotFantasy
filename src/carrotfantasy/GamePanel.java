@@ -73,7 +73,7 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 	
 	public void run(){
 		layeredPane = this.getLayeredPane();
-		JLabel loading = new JLabel(imgReader.getImageIcon("Images\\loading-hd.png", 0, 0, 960, 640, 1, false));
+		JLabel loading = new JLabel(imgReader.getImageIcon("Images/loading-hd.png", 0, 0, 960, 640, 1, false));
 		loading.setBounds(0, 0, 960, 640);
 		loading.setVisible(true);
 		layeredPane.add(loading, Integer.valueOf(500));
@@ -81,16 +81,16 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 		bg = getMyBackground();
 		path = getPath();
 		menuBG.setBounds(12, -1, 926, 78);
-		menuBG.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 2, 2, 926, 78, 1, false));
+		menuBG.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 2, 2, 926, 78, 1, false));
 		menuCenter.setBounds(362, 5, 236, 52);
-		menuCenter.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 268, 358, 52, 236, 1, true));
+		menuCenter.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 268, 358, 52, 236, 1, true));
 		pause.setBounds(780, 5, 56, 56);
-		pause.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
+		pause.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
 		pause.setBorder(null);
 		pause.setContentAreaFilled(false);
 		pause.addActionListener(this);
 		menu.setBounds(850, 5, 56, 56);
-		menu.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1474, 686, 56, 56, 1, false));
+		menu.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1474, 686, 56, 56, 1, false));
 		menu.setBorder(null);
 		menu.setContentAreaFilled(false);
 		menu.addActionListener(this);
@@ -151,7 +151,7 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 			contentPane.add(cells[i]);
 		}
 		chosenCell.setBounds(0, 0, 80, 80);
-		chosenCell.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 766, 806, 72, 72, 1, false));
+		chosenCell.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 766, 806, 72, 72, 1, false));
 		chosenCell.setVisible(false);
 		bottle.setBounds(0, 0, 80, 80);
 		bottle.setBorder(null);
@@ -188,46 +188,46 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 		operatingBox.add(range, Integer.valueOf(-30010));
 		
 		popupMenuBG.setBounds(259, 151, 442, 338);
-		popupMenuBG.setIcon(imgReader.getImageIcon("Images\\scene\\gamemenu-hd.png", 2, 2, 442, 338, 1, false));
+		popupMenuBG.setIcon(imgReader.getImageIcon("Images/scene\\gamemenu-hd.png", 2, 2, 442, 338, 1, false));
 		popupMenuBG.setVisible(false);
 		resume.setBounds(350, 180, 236, 72);
-		resume.setIcon(imgReader.getImageIcon("Images\\scene\\gamemenu-hd.png", 240, 342, 236, 72, 1, false));
+		resume.setIcon(imgReader.getImageIcon("Images/scene\\gamemenu-hd.png", 240, 342, 236, 72, 1, false));
 		resume.setVisible(false);
 		resume.setBorder(null);
 		resume.setContentAreaFilled(false);
 		resume.setFocusPainted(false);
 		resume.addActionListener(this);
 		restart.setBounds(350, 275, 236, 72);
-		restart.setIcon(imgReader.getImageIcon("Images\\scene\\gamemenu-hd.png", 2, 490, 236, 72, 1, false));
+		restart.setIcon(imgReader.getImageIcon("Images/scene\\gamemenu-hd.png", 2, 490, 236, 72, 1, false));
 		restart.setVisible(false);
 		restart.setBorder(null);
 		restart.setContentAreaFilled(false);
 		restart.setFocusPainted(false);
 		restart.addActionListener(this);
 		chooseLevel.setBounds(350, 370, 236, 72);
-		chooseLevel.setIcon(imgReader.getImageIcon("Images\\scene\\gamemenu-hd.png", 240, 490, 236, 72, 1, false));
+		chooseLevel.setIcon(imgReader.getImageIcon("Images/scene\\gamemenu-hd.png", 240, 490, 236, 72, 1, false));
 		chooseLevel.setVisible(false);
 		chooseLevel.setBorder(null);
 		chooseLevel.setContentAreaFilled(false);
 		chooseLevel.setFocusPainted(false);
 		chooseLevel.addActionListener(this);
 		
-		sell_80 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1082, 648, 76, 78, 0.8, false);
-		sell_144 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1226, 936, 76, 78, 0.8, false);
-		sell_208 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1396, 807, 76, 78, 0.8, false);
-		sell_256 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1396, 647, 76, 78, 0.8, false);
-		upgrade_180 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 994, 808, 78, 76, 0.8, true);
-		upgrade_260 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 906, 886, 78, 76, 0.8, true);
-		upgrade_320 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 924, 730, 78, 76, 0.8, true);
-		_upgrade_180 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1260, 487, 76, 78, 0.8, false);
-		_upgrade_260 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1102, 498, 78, 76, 0.8, true);
-		_upgrade_320 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1004, 730, 78, 76, 0.8, true);
-		cant_upgrade = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1318, 807, 76, 76, 0.8, false);
-		range_150 = imgReader.getImageIcon("Images\\Items\\Items00-hd.png", 644, 343, 282, 282, 1, false);
-		range_200 = imgReader.getImageIcon("Images\\Items\\Items00-hd.png", 484, 855, 424, 424, 1, false);
-		range_210 = imgReader.getImageIcon("Images\\Items\\Items00-hd.png", 644, 2, 339, 339, 1, false);
-		range_280 = imgReader.getImageIcon("Images\\Items\\Items00-hd.png", 2, 644, 480, 480, 1, false);
-		range_360 = imgReader.getImageIcon("Images\\Items\\Items00-hd.png", 2, 2, 640, 640, 1, false);
+		sell_80 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1082, 648, 76, 78, 0.8, false);
+		sell_144 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1226, 936, 76, 78, 0.8, false);
+		sell_208 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1396, 807, 76, 78, 0.8, false);
+		sell_256 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1396, 647, 76, 78, 0.8, false);
+		upgrade_180 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 994, 808, 78, 76, 0.8, true);
+		upgrade_260 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 906, 886, 78, 76, 0.8, true);
+		upgrade_320 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 924, 730, 78, 76, 0.8, true);
+		_upgrade_180 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1260, 487, 76, 78, 0.8, false);
+		_upgrade_260 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1102, 498, 78, 76, 0.8, true);
+		_upgrade_320 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1004, 730, 78, 76, 0.8, true);
+		cant_upgrade = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1318, 807, 76, 76, 0.8, false);
+		range_150 = imgReader.getImageIcon("Images/Items\\Items00-hd.png", 644, 343, 282, 282, 1, false);
+		range_200 = imgReader.getImageIcon("Images/Items\\Items00-hd.png", 484, 855, 424, 424, 1, false);
+		range_210 = imgReader.getImageIcon("Images/Items\\Items00-hd.png", 644, 2, 339, 339, 1, false);
+		range_280 = imgReader.getImageIcon("Images/Items\\Items00-hd.png", 2, 644, 480, 480, 1, false);
+		range_360 = imgReader.getImageIcon("Images/Items\\Items00-hd.png", 2, 2, 640, 640, 1, false);
 		while(true) {
 			try {
 				Thread.sleep(1);
@@ -245,10 +245,10 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 	public void setLayout() {
 		switch (mode) {
 		case 0:
-			obstacle1.setIcon(imgReader.getImageIcon("Images\\Theme1\\Items\\Object01-hd.png", 2, 2, 160, 156, 1, false));
+			obstacle1.setIcon(imgReader.getImageIcon("Images/Theme1\\Items\\Object01-hd.png", 2, 2, 160, 156, 1, false));
 			obstacle1.setBounds(400, 440, 160, 160);
 			obstacle2.setVisible(false);
-			start.setIcon(imgReader.getImageIcon("Images\\Theme1\\Items\\Object01-hd.png", 320, 2, 93, 73, 0.8, false));
+			start.setIcon(imgReader.getImageIcon("Images/Theme1\\Items\\Object01-hd.png", 320, 2, 93, 73, 0.8, false));
 			start.setBounds(80, 110, 75, 60);
 			carrot = new Carrot(805, 60, 20);
 			layeredPane.add(carrot, Integer.valueOf(-30006));
@@ -262,11 +262,11 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 			block.add(68); block.add(69); block.add(70); block.add(71);
 			break;
 		case 1:
-			obstacle1.setIcon(imgReader.getImageIcon("Images\\Theme2\\Items\\Object01-hd.png", 145, 82, 75, 64, 1, true));
+			obstacle1.setIcon(imgReader.getImageIcon("Images/Theme2\\Items\\Object01-hd.png", 145, 82, 75, 64, 1, true));
 			obstacle1.setBounds(10, 285, 80, 80);
-			obstacle2.setIcon(imgReader.getImageIcon("Images\\Theme2\\Items\\Object01-hd.png", 2, 442, 152, 64, 1, false));
+			obstacle2.setIcon(imgReader.getImageIcon("Images/Theme2\\Items\\Object01-hd.png", 2, 442, 152, 64, 1, false));
 			obstacle2.setBounds(645, 370, 152, 64);
-			start.setIcon(imgReader.getImageIcon("Images\\Theme1\\Items\\Object01-hd.png", 320, 2, 93, 73, 0.8, false));
+			start.setIcon(imgReader.getImageIcon("Images/Theme1\\Items\\Object01-hd.png", 320, 2, 93, 73, 0.8, false));
 			start.setBounds(0, 110, 75, 60);
 			carrot = new Carrot(725, 380, 60);
 			layeredPane.add(carrot, Integer.valueOf(-30005));
@@ -287,11 +287,11 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 				}
 			break;
 		case 2:
-			obstacle1.setIcon(imgReader.getImageIcon("Images\\Theme3\\Items\\Object01-hd.png", 2, 2, 156, 116, 1, false));
+			obstacle1.setIcon(imgReader.getImageIcon("Images/Theme3\\Items\\Object01-hd.png", 2, 2, 156, 116, 1, false));
 			obstacle1.setBounds(5, 300, 156, 116);
-			obstacle2.setIcon(imgReader.getImageIcon("Images\\Theme3\\Items\\Object01-hd.png", 2, 246, 124, 132, 1, false));
+			obstacle2.setIcon(imgReader.getImageIcon("Images/Theme3\\Items\\Object01-hd.png", 2, 246, 124, 132, 1, false));
 			obstacle2.setBounds(655, 135, 124, 132);
-			start.setIcon(imgReader.getImageIcon("Images\\Theme1\\Items\\Object01-hd.png", 320, 2, 93, 73, 0.8, false));
+			start.setIcon(imgReader.getImageIcon("Images/Theme1\\Items\\Object01-hd.png", 320, 2, 93, 73, 0.8, false));
 			start.setBounds(20, 200, 75, 60);
 			carrot = new Carrot(805, 60, 20);
 			layeredPane.add(carrot, Integer.valueOf(-30005));
@@ -321,13 +321,13 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 		bg.setBounds(0, 0, 960, 640);
 		switch (mode) {
 		case 0:
-			bg.setIcon(imgReader.getImageIcon("Images\\Theme1\\BG0\\BG1-hd.png", 0, 0, 960, 640, 1, false));
+			bg.setIcon(imgReader.getImageIcon("Images/Theme1\\BG0\\BG1-hd.png", 0, 0, 960, 640, 1, false));
 			break;
 		case 1:
-			bg.setIcon(imgReader.getImageIcon("Images\\Theme2\\BG0\\BG1-hd.png", 0, 0, 960, 640, 1, false));
+			bg.setIcon(imgReader.getImageIcon("Images/Theme2\\BG0\\BG1-hd.png", 0, 0, 960, 640, 1, false));
 			break;
 		case 2:
-			bg.setIcon(imgReader.getImageIcon("Images\\Theme3\\BG0\\BG1-hd.png", 0, 0, 960, 640, 1, false));
+			bg.setIcon(imgReader.getImageIcon("Images/Theme3\\BG0\\BG1-hd.png", 0, 0, 960, 640, 1, false));
 			break;
 		}
 		return bg;
@@ -338,15 +338,15 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 		switch (mode) {
 		case 0:
 			path.setBounds(0, 120, 960, 482);
-			path.setIcon(imgReader.getImageIcon("Images\\Theme1\\BG1\\BG-hd.png", 0, 0, 960, 482, 1, false));
+			path.setIcon(imgReader.getImageIcon("Images/Theme1\\BG1\\BG-hd.png", 0, 0, 960, 482, 1, false));
 			break;
 		case 1:
 			path.setBounds(0, 110, 960, 492);
-			path.setIcon(imgReader.getImageIcon("Images\\Theme2\\BG1\\BG-hd.png", 0, 0, 960, 492, 1, false));
+			path.setIcon(imgReader.getImageIcon("Images/Theme2\\BG1\\BG-hd.png", 0, 0, 960, 492, 1, false));
 			break;
 		case 2:
 			path.setBounds(0, 140, 960, 464);
-			path.setIcon(imgReader.getImageIcon("Images\\Theme3\\BG1\\BG-hd.png", 0, 0, 464, 960, 1, true));
+			path.setIcon(imgReader.getImageIcon("Images/Theme3\\BG1\\BG-hd.png", 0, 0, 464, 960, 1, true));
 			break;
 		}
 		return path;
@@ -385,7 +385,7 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 			if(!popupMenuBG.isVisible() && !gameOverPane.isVisible()) {
 				musicModule.play("select");
 				if(paused) {
-					pause.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
+					pause.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
 					paused = false;
 					monsterThread.myResume();
 					carrot.myResume();
@@ -396,7 +396,7 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 						if(hasTower[i] != 0) towers[i].myResume();
 					}
 				}else {
-					pause.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1418, 566, 56, 56, 1, false));
+					pause.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1418, 566, 56, 56, 1, false));
 					paused = true;
 					monsterThread.pause();
 					carrot.pause();
@@ -425,8 +425,8 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 					t.start();
 					hasTower[index] = 1;
 					monsterThread.money -= tmp.price;
-					if(monsterThread.money < 100) bottle.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true));
-					if(monsterThread.money < 180) sunFlower.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false));
+					if(monsterThread.money < 100) bottle.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true));
+					if(monsterThread.money < 180) sunFlower.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false));
 					moneyNums[0].setIcon(WhiteNum.nums[monsterThread.money / 1000]);
 					moneyNums[1].setIcon(WhiteNum.nums[(monsterThread.money / 100) % 10]);
 					moneyNums[2].setIcon(WhiteNum.nums[(monsterThread.money / 10) % 10]);
@@ -453,10 +453,10 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 					hasTower[index] = 2;
 					monsterThread.money -= tmp.price;
 					if(monsterThread.money < 100) {
-						bottle.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true));
+						bottle.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true));
 					}
 					if(monsterThread.money < 180) {
-						sunFlower.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false));
+						sunFlower.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false));
 					}
 					moneyNums[0].setIcon(WhiteNum.nums[monsterThread.money / 1000]);
 					moneyNums[1].setIcon(WhiteNum.nums[(monsterThread.money / 100) % 10]);
@@ -482,10 +482,10 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 				moneyNums[2].setIcon(WhiteNum.nums[(monsterThread.money / 10) % 10]);
 				moneyNums[3].setIcon(WhiteNum.nums[monsterThread.money % 10]);
 				if(monsterThread.money >= 100) {
-					bottle.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 55, 2, 76, 78, 0.8, true));
+					bottle.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 55, 2, 76, 78, 0.8, true));
 				}
 				if(monsterThread.money >= 180) {
-					sunFlower.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 442, 1000, 76, 78, 0.8, true));
+					sunFlower.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 442, 1000, 76, 78, 0.8, true));
 				}
 				operatingBox.setVisible(false);
 			}
@@ -505,10 +505,10 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 					moneyNums[3].setIcon(WhiteNum.nums[monsterThread.money % 10]);
 					operatingBox.setVisible(false);
 					if(monsterThread.money < 100) {
-						bottle.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true));
+						bottle.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true));
 					}
 					if(monsterThread.money < 180) {
-						sunFlower.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false));
+						sunFlower.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false));
 					}
 				}
 			}
@@ -535,7 +535,7 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 			resume.setVisible(false);
 			restart.setVisible(false);
 			chooseLevel.setVisible(false);
-			pause.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
+			pause.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
 			paused = false;
 			monsterThread.myResume();
 			carrot.myResume();
@@ -553,7 +553,7 @@ public class GamePanel extends JFrame implements ActionListener, Runnable{
 			chooseLevel.setVisible(false);
 			gameOverPane.setVisible(false);
 			operatingBox.setVisible(false);
-			pause.setIcon(imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
+			pause.setIcon(imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1474, 628, 56, 56, 1, false));
 			monsterThread.interrupt();
 			carrot.interrupt();
 			for(int i = 0; i < towers.length; i++) {

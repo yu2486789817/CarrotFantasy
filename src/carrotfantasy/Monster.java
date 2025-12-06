@@ -32,8 +32,8 @@ public class Monster extends JLabel implements Visitable{
 			xPos = 65;
 			yPos = 110;
 			if(texture1 == null) {
-				texture1 = imgReader.getImageIcon("Images\\Theme1\\Items\\Monsters01-hd.png", 176, 430, 100, 69, 1, false);
-				texture2 = imgReader.getImageIcon("Images\\Theme1\\Items\\Monsters01-hd.png", 286, 373, 94, 88, 1, false);
+				texture1 = imgReader.getImageIcon("Images/Theme1\\Items\\Monsters01-hd.png", 176, 430, 100, 69, 1, false);
+				texture2 = imgReader.getImageIcon("Images/Theme1\\Items\\Monsters01-hd.png", 286, 373, 94, 88, 1, false);
 			}
 			break;
 		case 1:
@@ -41,8 +41,8 @@ public class Monster extends JLabel implements Visitable{
 			xPos = 10;
 			yPos = 100;
 			if(texture1 == null) {
-				texture1 = imgReader.getImageIcon("Images\\Theme2\\Items\\Monsters01-hd.png", 105, 496, 75, 65, 1, false);
-				texture2 = imgReader.getImageIcon("Images\\Theme2\\Items\\Monsters01-hd.png", 221, 486, 65, 75, 1, true);
+				texture1 = imgReader.getImageIcon("Images/Theme2\\Items\\Monsters01-hd.png", 105, 496, 75, 65, 1, false);
+				texture2 = imgReader.getImageIcon("Images/Theme2\\Items\\Monsters01-hd.png", 221, 486, 65, 75, 1, true);
 			}
 			break;
 		case 2:
@@ -50,8 +50,8 @@ public class Monster extends JLabel implements Visitable{
 			xPos = 10;
 			yPos = 175;
 			if(texture1 == null) {
-				texture1 = imgReader.getImageIcon("Images\\Theme3\\Items\\Monsters01-hd.png", 295, 62, 90, 80, 1, false);
-				texture2 = imgReader.getImageIcon("Images\\Theme3\\Items\\Monsters01-hd.png", 388, 62, 95, 80, 1, false);
+				texture1 = imgReader.getImageIcon("Images/Theme3\\Items\\Monsters01-hd.png", 295, 62, 90, 80, 1, false);
+				texture2 = imgReader.getImageIcon("Images/Theme3\\Items\\Monsters01-hd.png", 388, 62, 95, 80, 1, false);
 			}
 			break;
 		}
@@ -88,8 +88,8 @@ public class Monster extends JLabel implements Visitable{
 			xPos = 65;
 			yPos = 110;
 			if(texture1 == null) {
-				texture1 = imgReader.getImageIcon("Images\\Theme1\\Items\\Monsters01-hd.png", 176, 430, 100, 69, 1, false);
-				texture2 = imgReader.getImageIcon("Images\\Theme1\\Items\\Monsters01-hd.png", 286, 373, 94, 88, 1, false);
+				texture1 = imgReader.getImageIcon("Images/Theme1\\Items\\Monsters01-hd.png", 176, 430, 100, 69, 1, false);
+				texture2 = imgReader.getImageIcon("Images/Theme1\\Items\\Monsters01-hd.png", 286, 373, 94, 88, 1, false);
 			}
 			break;
 		case 1:
@@ -97,8 +97,8 @@ public class Monster extends JLabel implements Visitable{
 			xPos = 10;
 			yPos = 100;
 			if(texture1 == null) {
-				texture1 = imgReader.getImageIcon("Images\\Theme2\\Items\\Monsters01-hd.png", 105, 496, 75, 65, 1, false);
-				texture2 = imgReader.getImageIcon("Images\\Theme2\\Items\\Monsters01-hd.png", 221, 486, 65, 75, 1, true);
+				texture1 = imgReader.getImageIcon("Images/Theme2\\Items\\Monsters01-hd.png", 105, 496, 75, 65, 1, false);
+				texture2 = imgReader.getImageIcon("Images/Theme2\\Items\\Monsters01-hd.png", 221, 486, 65, 75, 1, true);
 			}
 			break;
 		case 2:
@@ -106,8 +106,8 @@ public class Monster extends JLabel implements Visitable{
 			xPos = 10;
 			yPos = 175;
 			if(texture1 == null) {
-				texture1 = imgReader.getImageIcon("Images\\Theme3\\Items\\Monsters01-hd.png", 295, 62, 90, 80, 1, false);
-				texture2 = imgReader.getImageIcon("Images\\Theme3\\Items\\Monsters01-hd.png", 388, 62, 95, 80, 1, false);
+				texture1 = imgReader.getImageIcon("Images/Theme3\\Items\\Monsters01-hd.png", 295, 62, 90, 80, 1, false);
+				texture2 = imgReader.getImageIcon("Images/Theme3\\Items\\Monsters01-hd.png", 388, 62, 95, 80, 1, false);
 			}
 			break;
 		}

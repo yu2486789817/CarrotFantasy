@@ -29,16 +29,16 @@ public class MainMenu extends JFrame implements ActionListener{
 	
 	void init(){
 		musicModule.play("BGMusic");
-		bg = new JLabel(imgReader.getImageIcon("Images\\scene\\mainscene1-hd.png", 2, 2, 640, 960, 1, true));
+		bg = new JLabel(imgReader.getImageIcon("Images/scene/mainscene1-hd.png", 2, 2, 640, 960, 1, true));
 		bg.setSize(960, 640);
 		
 		layeredPane = this.getLayeredPane();
 		layeredPane.add(bg, Integer.valueOf(-30010));
 		
-		title = new JLabel(imgReader.getImageIcon("Images\\scene\\mainscene1-hd.png", 644, 2, 534, 298, 1, false));
+		title = new JLabel(imgReader.getImageIcon("Images/scene/mainscene1-hd.png", 644, 2, 534, 298, 1, false));
 		title.setBounds(213, 281, 534, 298);
 
-		btStart = new JButton(imgReader.getImageIcon("Images\\scene\\mainscene1-hd.png", 1180, 300, 122, 296, 1, true));
+		btStart = new JButton(imgReader.getImageIcon("Images/scene/mainscene1-hd.png", 1180, 300, 122, 296, 1, true));
 		btStart.setBounds(332, 53, 296, 122);
 		btStart.setBorder(null);
 		btStart.setContentAreaFilled(false);
@@ -56,7 +56,7 @@ public class MainMenu extends JFrame implements ActionListener{
 	void selectDifficultyPage() {
 		btDifficulty = new JButton[3];
 		for(int i = 0; i < 3; i++) {
-			btDifficulty[i] = new JButton(imgReader.getImageIcon("Images\\scene\\difficulty_bt_" + String.valueOf(i+1) + ".png", 0, 0, 296, 122, 1, false));
+			btDifficulty[i] = new JButton(imgReader.getImageIcon("Images/scene/difficulty_bt_" + String.valueOf(i+1) + ".png", 0, 0, 296, 122, 1, false));
 			btDifficulty[i].setBounds(332 + (i-1) * 300, 53, 296, 122);
 			btDifficulty[i].setBorder(null);
 			btDifficulty[i].setContentAreaFilled(false);
@@ -72,7 +72,7 @@ public class MainMenu extends JFrame implements ActionListener{
 		Object obj = e.getSource();
 		if(obj == (Object)btStart) {
 			musicModule.play("select");
-			btStart.setIcon(imgReader.getImageIcon("Images\\scene\\mainscene1-hd.png", 1180, 2, 122, 296, 1, true));
+			btStart.setIcon(imgReader.getImageIcon("Images/scene/mainscene1-hd.png", 1180, 2, 122, 296, 1, true));
 			btStart.setVisible(false);
 			selectDifficultyPage();
 		}else if(obj == (Object)btDifficulty[0]) {

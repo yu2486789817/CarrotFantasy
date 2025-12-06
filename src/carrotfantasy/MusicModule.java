@@ -14,19 +14,19 @@ public class MusicModule {
 	
 	MusicModule(){
 		try {
-			File BGMusicFile = new File("Music\\Main\\BGMusic.wav");
-			selectFile = new File("Music\\Main\\select.wav");
-			towerBuildFile = new File("Music\\Items\\TowerBuild.wav");
-			towerSellFile = new File("Music\\Items\\TowerSell.wav");
-			towerUpgradeFile = new File("Music\\Items\\TowerUpgrade.wav");
-			towerSelectFile = new File("Music\\Items\\TowerSelect.wav");
-			towerDeselectFile = new File("Music\\Items\\TowerDeselect.wav");
-			crashFile = new File("Music\\Items\\Crash.wav");
-			bottleFile = new File("Music\\Towers\\Bottle.wav");
-			sunFile = new File("Music\\Towers\\Sun.wav");
-			loseFile = new File("Music\\Items\\Lose.wav");
-			countDownFile = new File("Music\\Items\\CountDown.wav");
-			perfectFile = new File("Music\\Items\\Perfect.wav");
+			File BGMusicFile = new File("Music/Main/BGMusic.wav");
+			selectFile = new File("Music/Main/select.wav");
+			towerBuildFile = new File("Music/Items/TowerBuild.wav");
+			towerSellFile = new File("Music/Items/TowerSell.wav");
+			towerUpgradeFile = new File("Music/Items/TowerUpgrade.wav");
+			towerSelectFile = new File("Music/Items/TowerSelect.wav");
+			towerDeselectFile = new File("Music/Items/TowerDeselect.wav");
+			crashFile = new File("Music/Items/Crash.wav");
+			bottleFile = new File("Music/Towers/Bottle.wav");
+			sunFile = new File("Music/Towers/Sun.wav");
+			loseFile = new File("Music/Items/Lose.wav");
+			countDownFile = new File("Music/Items/CountDown.wav");
+			perfectFile = new File("Music/Items/Perfect.wav");
 			BGMusicStream = AudioSystem.getAudioInputStream(BGMusicFile);
 			BGMusic = (Clip) AudioSystem.getLine(new DataLine.Info(Clip.class, BGMusicStream.getFormat()));
 		} catch (UnsupportedAudioFileException e1) {

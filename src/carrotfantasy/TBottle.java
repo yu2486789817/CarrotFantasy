@@ -15,8 +15,8 @@ public class TBottle extends Tower{
 	private JButton bottle2;
 	private JButton cell;
 	private static ImageReader imgReader = new ImageReader();
-	private static ImageIcon texture1 = imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 2, 264, 60, 60, 1, false);
-	private static ImageIcon texture2 = imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 15, 462, 56, 26, 1, true);
+	private static ImageIcon texture1 = imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 2, 264, 60, 60, 1, false);
+	private static ImageIcon texture2 = imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 15, 462, 56, 26, 1, true);
 	private Monster[] monsters;
 	private boolean ready;
 
@@ -62,10 +62,10 @@ public class TBottle extends Tower{
 		range += 80;
 		switch(level) {
 		case 2:
-			bottle2.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 2, 356, 64, 36, 1, true));
+			bottle2.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 2, 356, 64, 36, 1, true));
 			break;
 		case 3:
-			bottle2.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 8, 132, 46, 70, 1, -180));
+			bottle2.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 8, 132, 46, 70, 1, -180));
 			break;
 		}
 	}
@@ -101,19 +101,19 @@ public class TBottle extends Tower{
 					
 					switch(level) {
 					case 1:
-						bottle2.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 15, 462, 56, 26, 1, orient));
+						bottle2.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 15, 462, 56, 26, 1, orient));
 						break;
 					case 2:
-						bottle2.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 2, 356, 64, 36, 1, orient));
+						bottle2.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 2, 356, 64, 36, 1, orient));
 						break;
 					case 3:
-						bottle2.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 8, 132, 46, 70, 1, orient - 90));
+						bottle2.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 8, 132, 46, 70, 1, orient - 90));
 						break;
 					}
 					if(this.ready) {
 						musicModule.play("bottle");
 						Bullet bullet = new Bullet(400 + deltaX, 400 + deltaY, orient);
-						bullet.setIcon(imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 2, 2, 50, 26, 1, orient));
+						bullet.setIcon(imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 2, 2, 50, 26, 1, orient));
 						this.add(bullet);
 						new Thread(bullet).start();
 						this.ready = false;

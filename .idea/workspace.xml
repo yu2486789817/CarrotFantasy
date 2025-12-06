@@ -4,7 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1431be78-b90e-4cca-9f26-e06dee061cb0" name="更改" comment="" />
+    <list default="true" id="1431be78-b90e-4cca-9f26-e06dee061cb0" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring_Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Refactoring_Report.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring_Report_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/Refactoring_Report_CN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/Carrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/Carrot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/GameEntityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/GameEntityFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/GameOverPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/GameOverPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/GamePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/ImageReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/ImageReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/Monster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/MonsterThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/MonsterThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/MusicModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/MusicModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/TBottle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/TBottle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/TSunFlower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/TSunFlower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/WhiteNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/WhiteNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/YellowNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/YellowNum.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,27 +50,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDK",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/renhongzhen/GitHub/CarrotFantasy&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDK&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.MainMenu.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="MainMenu" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="21" />
@@ -73,8 +94,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
-        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.23892.409" />
+        <option value="bundled-js-predefined-d6986cc7102b-e03c56caf84a-JavaScript-IU-252.23892.409" />
       </set>
     </attachedChunks>
   </component>
@@ -89,6 +110,12 @@
       <workItem from="1764310627759" duration="1397000" />
       <workItem from="1764490912499" duration="17000" />
       <workItem from="1764567436206" duration="21000" />
+      <workItem from="1764585358507" duration="876000" />
+      <workItem from="1764657410544" duration="6286000" />
+      <workItem from="1764778491634" duration="26000" />
+      <workItem from="1764929139916" duration="2520000" />
+      <workItem from="1764933277052" duration="2845000" />
+      <workItem from="1765020311432" duration="2031000" />
     </task>
     <servers />
   </component>

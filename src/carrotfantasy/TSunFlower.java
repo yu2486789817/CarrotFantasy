@@ -13,8 +13,8 @@ public class TSunFlower extends Tower{
 	private JLabel flower2;
 	private JLabel flame;
 	private static ImageReader imgReader = new ImageReader();
-	private static ImageIcon texture1 = imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 384, 620, 64, 64, 1, false);
-	private static ImageIcon texture2 = imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 362, 1080, 46, 46, 1, false);
+	private static ImageIcon texture1 = imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 384, 620, 64, 64, 1, false);
+	private static ImageIcon texture2 = imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 362, 1080, 46, 46, 1, false);
 	private Monster[] monsters;
 
 	TSunFlower(int x, int y, Monster[] m, int mn){
@@ -58,13 +58,13 @@ public class TSunFlower extends Tower{
 		case 2:
 			price = 260;
 			upgradePrice = 320;
-			flower1.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 384, 548, 70, 70, 1, false));
-			flower2.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 256, 1830, 52, 52, 1, false));
+			flower1.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 384, 548, 70, 70, 1, false));
+			flower2.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 256, 1830, 52, 52, 1, false));
 			break;
 		case 3:
 			price = 320;
-			flower1.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 362, 1000, 78, 78, 1, false));
-			flower2.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 450, 620, 60, 60, 1, false));
+			flower1.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 362, 1000, 78, 78, 1, false));
+			flower2.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 450, 620, 60, 60, 1, false));
 			break;
 		}
 		range = 200;
@@ -98,24 +98,24 @@ public class TSunFlower extends Tower{
 				try {
 					switch(level) {
 					case 1:
-						flame.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 362, 770, 228, 228, 1, false));
+						flame.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 362, 770, 228, 228, 1, false));
 						flame.setVisible(true);
 						Thread.sleep((int)(this.cd * 1 / 12));
-						flame.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 2, 1758, 252, 252, 1, false));
+						flame.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 2, 1758, 252, 252, 1, false));
 						Thread.sleep((int)(this.cd * 1 / 12));
-						flame.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 318, 1132, 286, 286, 1, false));
+						flame.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 318, 1132, 286, 286, 1, false));
 						Thread.sleep((int)(this.cd * 2 / 12));
 						flame.setVisible(false);
 						Thread.sleep(this.cd * 8 / 12);
 						this.attacking = false;
 						break;
 					default:
-						flame.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 312, 1756, 284, 282, 1, false));
+						flame.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 312, 1756, 284, 282, 1, false));
 						flame.setVisible(true);
 						Thread.sleep((int)(this.cd * 1 / 12));
-						flame.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 2, 1132, 316, 314, 1, false));
+						flame.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 2, 1132, 316, 314, 1, false));
 						Thread.sleep((int)(this.cd * 1 / 12));
-						flame.setIcon(imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 2, 770, 360, 358, 1, false));
+						flame.setIcon(imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 2, 770, 360, 358, 1, false));
 						Thread.sleep((int)(this.cd * 2 / 12));
 						flame.setVisible(false);
 						Thread.sleep(this.cd * 8 / 12);

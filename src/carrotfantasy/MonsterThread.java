@@ -23,17 +23,17 @@ public class MonsterThread extends Thread{
 	private JLabel countDown;
 	private static MusicModule musicModule = new MusicModule();
 	private static ImageReader imgReader = new ImageReader();
-	private static ImageIcon bottleTexture1 = imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 55, 2, 76, 78, 0.8, true);
-	private static ImageIcon bottleTexture2 = imgReader.getImageIcon("Images\\Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true);
-	private static ImageIcon sunFlowerTexture1 = imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 442, 1000, 76, 78, 0.8, true);
-	private static ImageIcon sunFlowerTexture2 = imgReader.getImageIcon("Images\\Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false);
-	private static ImageIcon upgrade_180 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 994, 808, 78, 76, 0.8, true);
-	private static ImageIcon upgrade_260 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 906, 886, 78, 76, 0.8, true);
-	private static ImageIcon upgrade_320 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 924, 730, 78, 76, 0.8, true);
-	private static ImageIcon countDown_1 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 658, 688, 116, 74, 1, true);
-	private static ImageIcon countDown_2 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 688, 570, 96, 116, 1, false);
-	private static ImageIcon countDown_3 = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 540, 680, 116, 98, 1, true);
-	private static ImageIcon go = imgReader.getImageIcon("Images\\Items\\Items02-hd.png", 1280, 42, 200, 200, 1, false);
+	private static ImageIcon bottleTexture1 = imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 55, 2, 76, 78, 0.8, true);
+	private static ImageIcon bottleTexture2 = imgReader.getImageIcon("Images/Towers\\TBottle-hd.png", 55, 80, 76, 78, 0.8, true);
+	private static ImageIcon sunFlowerTexture1 = imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 442, 1000, 76, 78, 0.8, true);
+	private static ImageIcon sunFlowerTexture2 = imgReader.getImageIcon("Images/Towers\\TSun-hd.png", 522, 1000, 76, 78, 0.8, false);
+	private static ImageIcon upgrade_180 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 994, 808, 78, 76, 0.8, true);
+	private static ImageIcon upgrade_260 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 906, 886, 78, 76, 0.8, true);
+	private static ImageIcon upgrade_320 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 924, 730, 78, 76, 0.8, true);
+	private static ImageIcon countDown_1 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 658, 688, 116, 74, 1, true);
+	private static ImageIcon countDown_2 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 688, 570, 96, 116, 1, false);
+	private static ImageIcon countDown_3 = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 540, 680, 116, 98, 1, true);
+	private static ImageIcon go = imgReader.getImageIcon("Images/Items\\Items02-hd.png", 1280, 42, 200, 200, 1, false);
 
 	MonsterThread(Monster[] mon, int m, JLabel[] wn, JLabel[] mn, JButton b, JButton sun, Carrot c, GameOverPanel gop, Tower[] ts, JButton up,
 					JLabel cd){

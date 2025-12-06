@@ -35,9 +35,9 @@ class EasyModeFactory extends GameEntityFactory {
     public GameElement createGameElement(String elementType, int mode) {
         switch (elementType) {
             case "background":
-                return new GameElement("Images\\Theme1\\BG0\\BG1-hd.png", 0, 0, 960, 640);
+                return new GameElement("Images/Theme1\\BG0\\BG1-hd.png", 0, 0, 960, 640);
             case "path":
-                return new GameElement("Images\\Theme1\\BG1\\BG-hd.png", 0, 120, 960, 482);
+                return new GameElement("Images/Theme1\\BG1\\BG-hd.png", 0, 120, 960, 482);
             default:
                 return null;
         }
@@ -66,9 +66,9 @@ class MediumModeFactory extends GameEntityFactory {
     public GameElement createGameElement(String elementType, int mode) {
         switch (elementType) {
             case "background":
-                return new GameElement("Images\\Theme2\\BG0\\BG1-hd.png", 0, 0, 960, 640);
+                return new GameElement("Images/Theme2\\BG0\\BG1-hd.png", 0, 0, 960, 640);
             case "path":
-                return new GameElement("Images\\Theme2\\BG1\\BG-hd.png", 0, 110, 960, 492);
+                return new GameElement("Images/Theme2\\BG1\\BG-hd.png", 0, 110, 960, 492);
             default:
                 return null;
         }
@@ -97,9 +97,9 @@ class HardModeFactory extends GameEntityFactory {
     public GameElement createGameElement(String elementType, int mode) {
         switch (elementType) {
             case "background":
-                return new GameElement("Images\\Theme3\\BG0\\BG1-hd.png", 0, 0, 960, 640);
+                return new GameElement("Images/Theme3\\BG0\\BG1-hd.png", 0, 0, 960, 640);
             case "path":
-                return new GameElement("Images\\Theme3\\BG1\\BG-hd.png", 0, 140, 960, 464);
+                return new GameElement("Images/Theme3\\BG1\\BG-hd.png", 0, 140, 960, 464);
             default:
                 return null;
         }
