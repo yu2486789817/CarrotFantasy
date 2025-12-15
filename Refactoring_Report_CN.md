@@ -180,22 +180,16 @@ if(obj == (Object)bottle){
 **重构后代码片段**:
 ```java
 // 使用工厂方法模式重构
-public class GameFacade {
-    private GameEntityFactory entityFactory;
+public abstract class GameEntityFactory {
 
-    public boolean createTower(int towerType, int x, int y) {
-        if (gamePanel.getMoney() >= getTowerPrice(towerType)) {
-            Tower tower = entityFactory.createTower(towerType, x, y,
-                gamePanel.getMonsters(), gamePanel.getMonsterCount(), gamePanel.getCell(x, y));
-            if (tower != null) {
-                gamePanel.addTower(tower, x, y);
-                gamePanel.deductMoney(tower.getPrice());
-                musicModule.play("towerBuild");
-                return true;
-            }
-        }
-        return false;
-    }
+    // Factory method for creating monsters
+    public abstract Monster createMonster(int mode, int currentWave);
+
+    // Factory method for creating towers
+    public abstract Tower createTower(int towerType, int x, int y, Monster[] monsters, int monsterNum, Object cell);
+
+    // Factory method for creating game elements based on difficulty
+    public abstract GameElement createGameElement(String elementType, int mode);
 }
 
 // 工厂实现
@@ -331,7 +325,36 @@ public class GameFacade {
     private GamePanel gamePanel;
     private MonsterThread monsterThread;
     private MusicModule musicModule;
+    private GameEntityFactory entityFactory;
+    private GameStrategyContext strategyContext;
 
+    public GameFacade(GamePanel gamePanel) {
+        this.gamePanel = gamePanel;
+        this.musicModule = new MusicModule();
+
+        // 基于游戏模式进行初始化
+        int mode = gamePanel.getMode();
+        this.entityFactory = FactoryProvider.getFactory(mode);
+
+        // 设置策略
+        GameStrategy strategy;
+        switch (mode) {
+            case 0: strategy = new EasyModeStrategy(); break;
+            case 1: strategy = new MediumModeStrategy(); break;
+            case 2: strategy = new HardModeStrategy(); break;
+            default: strategy = new EasyModeStrategy();
+        }
+        this.strategyContext = new GameStrategyContext(strategy);
+    }
+
+    // 开始游戏的简化方法
+    public void startGame() {
+        musicModule.play("BGMusic");
+        initializeGameElements();
+        startMonsterThread();
+    }
+
+    // 创建防御塔的简化方法
     public boolean createTower(int towerType, int x, int y) {
         if (gamePanel.getMoney() >= getTowerPrice(towerType)) {
             Tower tower = entityFactory.createTower(towerType, x, y,
@@ -344,35 +367,6 @@ public class GameFacade {
             }
         }
         return false;
-    }
-
-    public void togglePause() {
-        if (gamePanel.isPaused()) {
-            resumeGame();
-        } else {
-            pauseGame();
-        }
-    }
-
-    private void pauseGame() {
-        gamePanel.setPaused(true);
-        monsterThread.pause();
-        gamePanel.getCarrot().pause();
-        gamePanel.pauseAllTowers();
-        musicModule.play("select");
-    }
-}
-
-// GamePanel 中简化的事件处理
-public void actionPerformed(ActionEvent e) {
-    if(obj == (Object)bottle) {
-        gameFacade.createTower(1, x, y);  // 简单的外观调用
-    } else if(obj == (Object)upgrade) {
-        gameFacade.upgradeTower(x, y);
-    } else if(obj == (Object)sell) {
-        gameFacade.sellTower(x, y);
-    } else if(obj == (Object)pause) {
-        gameFacade.togglePause();
     }
 }
 ```
@@ -910,21 +904,24 @@ for(int i = 0; i < monsterNum; i++) {
 
 ```java
 // 使用策略模式重构
-public class GameStrategyContext {
-    private GameStrategy strategy;
-
-    public void moveMonster(Monster monster, long deltaTime, int currentWave) {
-        strategy.executeMonsterMovement(monster, deltaTime, currentWave);
-    }
-
-    public boolean isMonsterAtEnd(Monster monster) {
-        return strategy.isMonsterReachedEnd(monster);
-    }
+public interface GameStrategy {
+    void executeMonsterMovement(Monster monster, long deltaTime, int currentWave);
+    boolean isMonsterReachedEnd(Monster monster);
+    int getInitialMonsterHP(int mode, int currentWave);
+    int getMonsterSpeed(int mode);
+    int getMonsterMoney(int mode);
 }
 
+// 简单模式的策略
 class EasyModeStrategy implements GameStrategy {
+    private int[] pathX = {80, 300, 545, 785};
+    private int[] pathY = {110, 250, 330, 110};
+    private int[] directions = {0, 1, 2, 1, 2, 1, 2};
+
     @Override
     public void executeMonsterMovement(Monster monster, long deltaTime, int currentWave) {
+        // 从 MonsterThread 中提取运动逻辑的实现
+        // 为便于演示，此处进行了简化
         if (monster.yPos < 330) {
             monster.yPos += deltaTime * getMonsterSpeed(0);
         } else if (monster.xPos < 300) {
@@ -932,6 +929,26 @@ class EasyModeStrategy implements GameStrategy {
         } else if (monster.yPos > 250) {
             monster.yPos -= deltaTime * getMonsterSpeed(0);
         }
+    }
+
+    @Override
+    public boolean isMonsterReachedEnd(Monster monster) {
+        return monster.xPos >= 785 && monster.yPos <= 110;
+    }
+
+    @Override
+    public int getInitialMonsterHP(int mode, int currentWave) {
+        return 100 + 50 * mode + 25 * currentWave;
+    }
+
+    @Override
+    public int getMonsterSpeed(int mode) {
+        return (int)(0.1 + 0.05 * mode * 1000); // 每秒转化为像素
+    }
+
+    @Override
+    public int getMonsterMoney(int mode) {
+        return 10;
     }
 }
 

@@ -87,7 +87,7 @@ According to the above analysis, we can conclude the problems existing in the de
 
 ### 3.2 Refactoring Solution (Patterns Applied)
 
-#### Pattern 1: Factory Method Pattern (Creational)
+#### 3.2.1: Factory Method Pattern (Creational)
 
 **Why Chosen**: The original code had scattered object creation logic with numerous conditional statements based on game difficulty. The Factory Method pattern was ideal for centralizing object creation and providing a clean interface for creating different types of game entities based on difficulty level.
 
@@ -180,22 +180,16 @@ if(obj == (Object)bottle){
 **After Refactoring Code Snippet**:
 ```java
 // Refactored with Factory Method Pattern
-public class GameFacade {
-    private GameEntityFactory entityFactory;
+public abstract class GameEntityFactory {
 
-    public boolean createTower(int towerType, int x, int y) {
-        if (gamePanel.getMoney() >= getTowerPrice(towerType)) {
-            Tower tower = entityFactory.createTower(towerType, x, y,
-                gamePanel.getMonsters(), gamePanel.getMonsterCount(), gamePanel.getCell(x, y));
-            if (tower != null) {
-                gamePanel.addTower(tower, x, y);
-                gamePanel.deductMoney(tower.getPrice());
-                musicModule.play("towerBuild");
-                return true;
-            }
-        }
-        return false;
-    }
+    // Factory method for creating monsters
+    public abstract Monster createMonster(int mode, int currentWave);
+
+    // Factory method for creating towers
+    public abstract Tower createTower(int towerType, int x, int y, Monster[] monsters, int monsterNum, Object cell);
+
+    // Factory method for creating game elements based on difficulty
+    public abstract GameElement createGameElement(String elementType, int mode);
 }
 
 // Factory implementation
@@ -333,7 +327,36 @@ public class GameFacade {
     private GamePanel gamePanel;
     private MonsterThread monsterThread;
     private MusicModule musicModule;
+    private GameEntityFactory entityFactory;
+    private GameStrategyContext strategyContext;
 
+    public GameFacade(GamePanel gamePanel) {
+        this.gamePanel = gamePanel;
+        this.musicModule = new MusicModule();
+
+        // Initialize based on game mode
+        int mode = gamePanel.getMode();
+        this.entityFactory = FactoryProvider.getFactory(mode);
+
+        // Set up strategy
+        GameStrategy strategy;
+        switch (mode) {
+            case 0: strategy = new EasyModeStrategy(); break;
+            case 1: strategy = new MediumModeStrategy(); break;
+            case 2: strategy = new HardModeStrategy(); break;
+            default: strategy = new EasyModeStrategy();
+        }
+        this.strategyContext = new GameStrategyContext(strategy);
+    }
+
+    // Simplified method to start game
+    public void startGame() {
+        musicModule.play("BGMusic");
+        initializeGameElements();
+        startMonsterThread();
+    }
+
+    // Simplified method to create tower
     public boolean createTower(int towerType, int x, int y) {
         if (gamePanel.getMoney() >= getTowerPrice(towerType)) {
             Tower tower = entityFactory.createTower(towerType, x, y,
@@ -346,35 +369,6 @@ public class GameFacade {
             }
         }
         return false;
-    }
-
-    public void togglePause() {
-        if (gamePanel.isPaused()) {
-            resumeGame();
-        } else {
-            pauseGame();
-        }
-    }
-
-    private void pauseGame() {
-        gamePanel.setPaused(true);
-        monsterThread.pause();
-        gamePanel.getCarrot().pause();
-        gamePanel.pauseAllTowers();
-        musicModule.play("select");
-    }
-}
-
-// Simplified event handling in GamePanel
-public void actionPerformed(ActionEvent e) {
-    if(obj == (Object)bottle) {
-        gameFacade.createTower(1, x, y);  // Simple facade call
-    } else if(obj == (Object)upgrade) {
-        gameFacade.upgradeTower(x, y);
-    } else if(obj == (Object)sell) {
-        gameFacade.sellTower(x, y);
-    } else if(obj == (Object)pause) {
-        gameFacade.togglePause();
     }
 }
 ```
@@ -914,21 +908,24 @@ for(int i = 0; i < monsterNum; i++) {
 
 ```java
 // Refactored with Strategy Pattern
-public class GameStrategyContext {
-    private GameStrategy strategy;
-
-    public void moveMonster(Monster monster, long deltaTime, int currentWave) {
-        strategy.executeMonsterMovement(monster, deltaTime, currentWave);
-    }
-
-    public boolean isMonsterAtEnd(Monster monster) {
-        return strategy.isMonsterReachedEnd(monster);
-    }
+public interface GameStrategy {
+    void executeMonsterMovement(Monster monster, long deltaTime, int currentWave);
+    boolean isMonsterReachedEnd(Monster monster);
+    int getInitialMonsterHP(int mode, int currentWave);
+    int getMonsterSpeed(int mode);
+    int getMonsterMoney(int mode);
 }
 
+// Easy mode strategy
 class EasyModeStrategy implements GameStrategy {
+    private int[] pathX = {80, 300, 545, 785};
+    private int[] pathY = {110, 250, 330, 110};
+    private int[] directions = {0, 1, 2, 1, 2, 1, 2};
+
     @Override
     public void executeMonsterMovement(Monster monster, long deltaTime, int currentWave) {
+        // Implementation would extract movement logic from MonsterThread
+        // This is simplified for demonstration
         if (monster.yPos < 330) {
             monster.yPos += deltaTime * getMonsterSpeed(0);
         } else if (monster.xPos < 300) {
@@ -936,6 +933,26 @@ class EasyModeStrategy implements GameStrategy {
         } else if (monster.yPos > 250) {
             monster.yPos -= deltaTime * getMonsterSpeed(0);
         }
+    }
+
+    @Override
+    public boolean isMonsterReachedEnd(Monster monster) {
+        return monster.xPos >= 785 && monster.yPos <= 110;
+    }
+
+    @Override
+    public int getInitialMonsterHP(int mode, int currentWave) {
+        return 100 + 50 * mode + 25 * currentWave;
+    }
+
+    @Override
+    public int getMonsterSpeed(int mode) {
+        return (int)(0.1 + 0.05 * mode * 1000); // Convert to pixels per second
+    }
+
+    @Override
+    public int getMonsterMoney(int mode) {
+        return 10;
     }
 }
 

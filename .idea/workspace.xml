@@ -6,21 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="1431be78-b90e-4cca-9f26-e06dee061cb0" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CLAUDE.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation_Slides.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation_Slides.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation_Slides.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Presentation_Slides.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Presentation_Slides.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/REFACTORING_SUMMARY.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Refactoring Assignment Prompt for Claude Code.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Refactoring_Report.md" beforeDir="false" afterPath="$PROJECT_DIR$/Refactoring_Report.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Refactoring_Report_CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/Refactoring_Report_CN.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/Carrot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/Carrot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/GameEntityFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/GameEntityFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/GameOverPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/GameOverPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/ImageReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/ImageReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/Monster.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/MonsterThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/MonsterThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/MusicModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/MusicModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/TBottle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/TBottle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/TSunFlower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/TSunFlower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/WhiteNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/WhiteNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/carrotfantasy/YellowNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/carrotfantasy/YellowNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML_Diagrams.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/设计模式重构塔防游戏实战汇报.pptx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +111,7 @@
       <workItem from="1764929139916" duration="2520000" />
       <workItem from="1764933277052" duration="2845000" />
       <workItem from="1765020311432" duration="2031000" />
+      <workItem from="1765781643116" duration="3769000" />
     </task>
     <servers />
   </component>
