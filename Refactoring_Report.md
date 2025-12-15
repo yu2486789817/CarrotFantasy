@@ -61,7 +61,7 @@ After analysis, we identified the following issues in the original code:
    - Monster movement logic based on game mode
    - Tower upgrade and sell operations
 
-4. **Hard-coded Values**: Extensive use of magic numbers and strings:
+4. **Hard-coded Values**: Extensive use of numbers and strings:
    - Screen coordinates and dimensions
    - File paths for resources
    - Game balance parameters
@@ -1286,7 +1286,7 @@ AI systematically identified and categorized various code smells:
 - **God Class Detection**: AI recognized `GamePanel` as handling too many responsibilities
 - **Duplicate Code Analysis**: AI found identical logic patterns in monster creation and tower management
 - **Conditional Complexity**: AI highlighted deeply nested if-else structures throughout the codebase
-- **Hard-coded Values**: AI identified magic numbers and strings that should be configuration parameters
+- **Hard-coded Values**: AI identified numbers and strings that should be configuration parameters
 
 #### 4.1.3 Selecting Appropriate Patterns
 Based on the identified issues, AI recommended specific design patterns:
